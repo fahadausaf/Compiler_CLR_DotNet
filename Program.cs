@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,8 +16,9 @@ namespace MCG_CS
 
             while (bExit == false)
             {
-                Console.WriteLine("\nPlease enter the file path or type quit to exit the application");
+                //Console.WriteLine("\nPlease enter the file path or type quit to exit the application");
                 string strFileName = Console.ReadLine();
+                //string strFileName = "";
 
                 if (strFileName == "quit")
                     bExit = true;
@@ -26,40 +27,22 @@ namespace MCG_CS
 
                     try
                     {
+                        string strInputCodeFile = "Greetings.kcl";
 
-                        Stopwatch timerParser = new Stopwatch();
-                        Stopwatch timerCompiler = new Stopwatch();
+                        //strFileName = "C:\\Users\\fahad\\Desktop\\MCG-CS\\Code\\" + strInputCodeFile;
 
-
-
-                        //string strInputCodeFile = "Factorial.kcl";
-
-                        //string strFileName = "C:\\Users\\fahad\\Desktop\\MCG-CS\\Code\\" + strInputCodeFile;
-
-                        timerParser.Start();
                         TextReader inputFile = File.OpenText(strFileName);
                         Lexer _Lexer = new Lexer(inputFile);
 
                         IList<object> lexemes = _Lexer.GetLexemes;
                         Parser parser = new Parser(lexemes);
 
-                        Console.WriteLine("\nParsing Time: " + (timerParser.ElapsedTicks).ToString());
-
-                        timerCompiler.Start();
-
                         strFileName = Path.GetFileNameWithoutExtension(strFileName);
                         CodeGenerator codeGenerator = new CodeGenerator(parser.GetParsedStatement, strFileName + ".exe");
 
-                        timerParser.Stop();
-                        timerCompiler.Stop();
-
-
-                        Console.WriteLine("Compiling Time: " + (timerCompiler.ElapsedTicks).ToString());
-                        Console.WriteLine("Overall Time: " + (timerParser.ElapsedTicks).ToString());
 
                         Console.WriteLine("\nCode has been compiled successfully!");
                         Console.WriteLine("\nAn executable assembly file has been generated with the same name as input file and saved in BIN\\DEBUG folder");
-
 
                     }
                     catch (Exception ex)
