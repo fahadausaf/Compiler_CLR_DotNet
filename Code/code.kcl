@@ -1,0 +1,11 @@
+﻿void TestFunction var output = 0, var inputA = 1, var inputB = 2
+begin
+	var test = 0;
+	test = inputA + inputB;
+	print test;
+endfunc;
+
+var one = 1;
+var two = 2;
+var three = 3;
+

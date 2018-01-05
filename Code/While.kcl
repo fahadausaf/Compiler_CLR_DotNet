@@ -1,0 +1,11 @@
+﻿var FirstNum = 10;
+var SecondNum = 5;
+
+while FirstNum > SecondNum do
+	print FirstNum;
+
+	FirstNum = FirstNum - 1;
+endwhile;
+
+print "Enter any number to continue";
+read SecondNum;

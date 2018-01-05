@@ -1,0 +1,11 @@
+﻿var x = 2;
+var y = 3;
+var z = y;
+print z;
+
+var msg = "Hello World";
+print msg;
+
+var n = 0;
+print "Enter any number from 0 to 9 to continue";
+read n;

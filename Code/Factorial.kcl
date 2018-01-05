@@ -1,0 +1,15 @@
+﻿var fact = 0;
+print "Enter any number to calculate factorial";
+read fact;
+fact = fact + 1;
+
+var c = 0;
+var result = 1;
+
+for c = 1 to fact do
+	result = result * c;
+end;
+
+print "The factorial is:";
+print result;
+read result;

@@ -1,0 +1,15 @@
+﻿var n = 0;
+print "Rate King's College from 1 to 10";
+read n;
+
+var x = 0;
+for x = 0 to n do
+    print "King's College is the best!";
+    
+	var z = 0;
+    for z = x to n do
+		print z;
+	end;
+end;
+
+read n;

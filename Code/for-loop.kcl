@@ -1,0 +1,11 @@
+﻿var ntimes = 0;
+print "Rate King's College from 1 to 10";
+read ntimes;
+var x = 0;
+var y = 0;
+for x = y to ntimes do
+   print "King's College is the best";
+end;
+print "press any key to continue...";
+var continue = 0;
+read continue;
